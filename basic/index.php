@@ -1,5 +1,5 @@
 <?php
-  $title = 'Variables';
+$title = 'Variables';
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +18,7 @@
       <h1 class="text-3xl font-semibold"><?php echo 'PHP Basics'; ?></h1>
     </div>
   </header>
-  
+
   <ul class="p-4 mx-auto max-w-2xl">
     <li class="nav-link">
       <a href="#print-text-to-html" onclick="scrollToSection('print-text-to-html')" class="hover:underline"> 1. Print text to HTML</a>
@@ -84,13 +84,13 @@
         '4. PHP Comments' ?>
       </h2>
       <pre>
-&lt;?
+&lt;?php
 // comment in PHP
 
 /**
  multiple comments
 */
-php echo 'Text'; ?&gt;
+echo 'Text'; ?&gt;
 
 </pre>
     </div>
@@ -107,7 +107,7 @@ php echo 'Text'; ?&gt;
     <!-- PHP Variables -->
     <div class="bg-white rounded-lg shadow-md p-6 mt-5">
       <h2 id="variables" class="text-2xl font-semibold mb-4">6. <?= $title ?></h2>
-<pre>
+      <pre>
 * prefix with a dollar sign $
 * must start with letter or underscore
 * can not start with a number
@@ -118,8 +118,8 @@ php echo 'Text'; ?&gt;
 
     <!-- PHP Data Types -->
     <div class="bg-white rounded-lg shadow-md p-6 mt-5">
-    <h2 id="data-types" class="text-2xl font-semibold mb-4">7. Data Types</h2>  
-<pre>
+      <h2 id="data-types" class="text-2xl font-semibold mb-4">7. Data Types</h2>
+      <pre>
   String: $name = 'Martin';
   var_dump($name); -> string(6) - give info about variable and length
   echo getType($name); -> string - info about type
@@ -162,21 +162,19 @@ php echo 'Text'; ?&gt;
         // This is comment
         '8. String Concatenation' ?>
       </h2>
-<pre>
-
-
+      <pre>
+&lt;?php   
+  $name = 'Martin';
+  $lname = 'NoName';
+?&gt;
+&lt;?= 'Hello my name is ' . $name . ' ' . $lname ?&gt; - literal string which is faster
+&lt;?= "Hello my name is $name $lname" ?&gt; - variable interpolation
+&lt;?= 'Hello my name is \'Martin\'' ?&gt; - escape char
 </pre>
     </div>
 
   </div>
-  <?php   
-    $name = 'Martin';
-    $lname = 'NoName';
-  ?>
-  <?= 'Hello my name is ' . $name . ' ' . $lname ?> - literal string which is faster
-  <?= "Hello my name is $name $lname" ?> - variable interpolation
-  <?= 'Hello my name is \'Martin\'' ?> - escape char
-  
+
   <script>
     function scrollToSection(sectionId) {
       const targetSection = document.getElementById(sectionId);
