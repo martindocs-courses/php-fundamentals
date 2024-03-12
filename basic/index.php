@@ -44,6 +44,9 @@ $title = 'Variables';
     <li class="nav-link">
       <a href="#string-concatenation" onclick="scrollToSection('string-concatenation')" class="hover:underline">8. String Concatenation</a>
     </li>
+    <li class="nav-link">
+      <a href="#type-casting" onclick="scrollToSection('type-casting')" class="hover:underline">9. Type Casting</a>
+    </li>
   </ul>
 
   <div class="container mx-auto p-4 mt-4">
@@ -149,7 +152,7 @@ echo 'Text'; ?&gt;
   Null: $food = null;
   var_dump($food); -> NULL
 
-  Resource: $file - cab be many things, for example open a file 
+  Resource: $file - can be many things, for example open a file 
   var_dump($file); -> resource(3) of type (stream) 
 
 </pre>
@@ -170,6 +173,46 @@ echo 'Text'; ?&gt;
 &lt;?= 'Hello my name is ' . $name . ' ' . $lname ?&gt; - literal string which is faster
 &lt;?= "Hello my name is $name $lname" ?&gt; - variable interpolation
 &lt;?= 'Hello my name is \'Martin\'' ?&gt; - escape char
+</pre>
+    </div>
+
+    <!-- Type Casting -->
+    <div class="bg-white rounded-lg shadow-md p-6 mt-5">
+      <h2 id="type-casting" class="text-2xl font-semibold mb-4">
+        <?=
+        // This is comment
+        '9. Type Casting' ?>
+      </h2>
+      <p><strong>Implicit Typecasting</strong></p>
+
+      <pre>
+&lt;?php   
+  $num1 = 1;
+  $num2 = 2;
+  $num3 = '3';
+  $animal = 'monkey';
+  $bool1 = true;
+  bool2 = false;
+  $null = null;
+  
+  $result = $num1 + $num2; // int 
+  $result = $num1 + $num3; // int (str to int conversion)
+  $result = $num3 + $num3; // int (str to int conversion)
+  $result = $num1 . $num3; // str (int to str conversion)
+  $result = $animal . $num1; // Error
+  $result = $num1 + $bool1; // int (bool to int, where true is 1)
+  $result = $num1 + $bool2; // int (bool to int, where false is 0)
+  $result = $num1 + $null; // int (null to int, where null is 0)  
+?&gt;
+</pre>
+
+<p><strong>Explicit conversion</strong></p>
+      <pre>
+&lt;?php
+  $num1 = (string) 1; // str (int to str conversion) => '1'
+  $num1 = (int) 'Martin'; // str (str to int conversion) => 0
+  $num1 = (bool) 1; // int (int to bool conversion) => true
+?&gt; 
 </pre>
     </div>
 
