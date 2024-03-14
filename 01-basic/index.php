@@ -47,6 +47,9 @@ $title = 'Variables';
     <li class="nav-link">
       <a href="#type-casting" onclick="scrollToSection('type-casting')" class="hover:underline">9. Type Casting</a>
     </li>
+    <li class="nav-link">
+      <a href="#arthmethic-operators" onclick="scrollToSection('arthmethic-operators')" class="hover:underline">10. Arthmethic Operators</a>
+    </li>
   </ul>
 
   <div class="container mx-auto p-4 mt-4">
@@ -206,7 +209,7 @@ echo 'Text'; ?&gt;
 ?&gt;
 </pre>
 
-<p><strong>Explicit conversion</strong></p>
+      <p><strong>Explicit conversion</strong></p>
       <pre>
 &lt;?php
   $num1 = (string) 1; // str (int to str conversion) => '1'
@@ -215,6 +218,81 @@ echo 'Text'; ?&gt;
 ?&gt; 
 </pre>
     </div>
+
+    <!-- Arthmethic Operators -->
+    <div class="bg-white rounded-lg shadow-md p-6 mt-5">
+      <h2 id="arthmethic-operators" class="text-2xl font-semibold mb-4">
+        <?=
+        // This is comment
+        '10. Arthmethic Operators' ?>
+      </h2>
+      <pre>
++ additions
+- substraction
+* multiplication
+/ division
+% modulus
+
+&lt;?php
+$output = null;
+
+$num1 = 10;
+$num2 = 20;
+
+// Basic Math
+$output = "$num1 + $num2 = " . $num1 + $num2;
+$output = "$num1 - $num2 = " . $num1 - $num2;
+$output = "$num1 * $num2 = " . $num1 * $num2;
+$output = "$num1 / $num2 = " . $num1 / $num2;
+$output = "$num1 % $num2 = " . $num1 % $num2;
+
+// Assigment Oparator
+$num3 = 10;
+$num3 += 20; // $num3 = $num3 + 20;
+$num3 -= 20;
+$num3 /= 20;
+
+$output = $num3;
+
+// Build in PHP functions
+
+// rand()- generate random number
+$output = rand(); // random number between 0 and max value
+$output = getrandmax(); // max value = 2147483647 
+$output = rand(1, 10); // random number between 0 and 10, inclusive
+
+// round()- round the number to the whole number
+$output = round(1.55);
+
+// ceil()- round the number up
+$output = ceil(0.45);
+
+// floor()- round the number down
+$output = floor(1.45);
+
+// sqrt()- square root the number
+$output = sqrt(4);
+
+// pi()
+$output = pi();
+
+// abs() - absolute value
+$output = abs(-56);
+
+// max() - max value in the range
+$output = max(1, 2, 3, 4); // list of numbers
+$output = max([56, 45, 7, 46]); // arrays
+
+// min() - min value in the range
+$output = min([1, 5, 7]);
+
+// number_format(float, num of decimals, decimal separator, thousands separator) 
+// format a number with grouped thousands
+$output = number_format(1234567.191234, 2, '.', '.'); 
+?&gt;
+</pre>
+    </div>
+
 
   </div>
 
