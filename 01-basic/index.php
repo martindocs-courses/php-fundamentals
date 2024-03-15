@@ -50,6 +50,9 @@ $title = 'Variables';
     <li class="nav-link">
       <a href="#arthmethic-operators" onclick="scrollToSection('arthmethic-operators')" class="hover:underline">10. Arthmethic Operators</a>
     </li>
+    <li class="nav-link">
+      <a href="#string-functions" onclick="scrollToSection('string-functions')" class="hover:underline">11. String Functions</a>
+    </li>
   </ul>
 
   <div class="container mx-auto p-4 mt-4">
@@ -293,6 +296,51 @@ $output = number_format(1234567.191234, 2, '.', '.');
 </pre>
     </div>
 
+      <!-- String Functions -->
+      <div class="bg-white rounded-lg shadow-md p-6 mt-5">
+      <h2 id="string-functions" class="text-2xl font-semibold mb-4">
+        <?=
+        // This is comment
+        '11. String Functions' ?>
+      </h2>
+      <pre>
+&lt;?php
+$output = null;
+
+$string = "Hello There!";
+
+// string length
+$output = strlen($string); // 5
+
+// word count 
+$output = str_word_count($string); // 1
+
+// string position
+$output = strpos($string, "h"); // 7
+
+// get specific char position
+$output = $string[7]; // h
+
+// substring - string, start, length
+$output = substr($string, 0, 2); // He
+
+// string replace - old_string, new_string, string
+$output = str_replace("There", "World", $string);
+
+// string to lower case
+$output = strtolower($string);
+
+// string to upper case
+$output = strtoupper($string);
+
+// first letter of each word to upper case
+$output = ucwords($string); // H and W
+
+// trim white spaces
+$output = trim('    Hi    ');
+?&gt;
+</pre>
+    </div>
 
   </div>
 
