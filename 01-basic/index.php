@@ -53,6 +53,9 @@ $title = 'Variables';
     <li class="nav-link">
       <a href="#string-functions" onclick="scrollToSection('string-functions')" class="hover:underline">11. String Functions</a>
     </li>
+    <li class="nav-link">
+      <a href="#date-time" onclick="scrollToSection('date-time')" class="hover:underline">12. Date & Time</a>
+    </li>
   </ul>
 
   <div class="container mx-auto p-4 mt-4">
@@ -338,6 +341,47 @@ $output = ucwords($string); // H and W
 
 // trim white spaces
 $output = trim('    Hi    ');
+?&gt;
+</pre>
+    </div>
+
+  <!-- Date & Time -->
+  <div class="bg-white rounded-lg shadow-md p-6 mt-5">
+      <h2 id="date-time" class="text-2xl font-semibold mb-4">
+        <?=
+        // This is comment
+        '12. Date & Time' ?>
+      </h2>
+      <pre>
+&lt;?php
+$output = null;
+
+/*
+  Y - yesr
+  m - month
+  d - day
+  D - day of the week short name
+  l - full day of the week name
+  h - hour 
+  i - minute
+  s - second
+  a - AM/PM
+*/
+
+// get date month-day-year
+$output = date("m-l-Y"); 
+
+// get year with timestamp format
+$output = date("Y", 936345600); // 1999
+
+// get timestamp from function 
+$output = date("Y", strtotime("2024-03-15"));
+
+// get month
+$output = date('m');
+
+// get hour-minute-second AM/PM
+$output = date('h-i-s a');
 ?&gt;
 </pre>
     </div>
