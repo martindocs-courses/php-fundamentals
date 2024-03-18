@@ -40,6 +40,9 @@
     <li class="nav-link">
       <a href="#associated-array" onclick="scrollToSection('associated-array')" class="hover:underline"> 8. Associated Array</a>
     </li>   
+    <li class="nav-link">
+      <a href="#multi-dimensional-arrays" onclick="scrollToSection('multi-dimensional-arrays')" class="hover:underline"> 9. Multi-Dimensional Arrays</a>
+    </li>   
   </ul>
 
   <div class="container mx-auto p-4 mt-4">
@@ -273,6 +276,62 @@ $output = $food;
 </pre>
     </div> 
 
+  <!-- Multi-Dimensional Arrays -->
+  <div class="bg-white rounded-lg shadow-md p-6  mt-5">
+      <h2 id="multi-dimensional-arrays" class="text-2xl font-semibold mb-4">9. Multi-Dimensional Arrays</h2>
+      <pre>
+&lt;?php
+$output = null;
+
+// Multi-Dimensional Arrays
+$colors = [
+  ['red', 'green', 'blue'],
+  ['yellow', 'brown', 'orange'],
+];
+
+// accessing the array
+$output = $colors[0][1];
+
+// add new color
+array_push($colors[0], 'violet');
+$output = $colors[0];
+
+$colors[] = ['lightblue', 'lightgreen'];
+$output = $colors;
+
+// assiociated multi-dim array
+$users = [
+  [
+    'name' => 'Martin',
+    'age' => 36,
+    'email' => 'martin@gmail.com',
+  ],
+  [
+    'name' => 'Adam',
+    'age' => 26,
+    'email' => 'adam@gmail.com',
+  ],
+  [
+    'name' => 'Barbara',
+    'age' => 46,
+    'email' => 'barbara@gmail.com',
+  ],
+
+];
+
+$output = $users[0]['email'];
+
+// add user
+$users[] = [
+  'name' => 'Gorge',
+  'age' => 25,
+  'email' => 'gorge@gmail.com',
+];
+
+$output = $users;
+?&gt;
+</pre>
+    </div> 
 
   </div>
 
