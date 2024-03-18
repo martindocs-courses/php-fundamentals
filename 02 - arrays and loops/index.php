@@ -37,6 +37,9 @@
     <li class="nav-link">
       <a href="#arrays-functions" onclick="scrollToSection('arrays-functions')" class="hover:underline"> 7. Arrays Functions</a>
     </li>   
+    <li class="nav-link">
+      <a href="#associated-array" onclick="scrollToSection('associated-array')" class="hover:underline"> 8. Associated Array</a>
+    </li>   
   </ul>
 
   <div class="container mx-auto p-4 mt-4">
@@ -236,6 +239,40 @@ var_dump($ids5);
 
 </pre>
     </div> 
+
+  <!-- Associated Array -->
+  <div class="bg-white rounded-lg shadow-md p-6  mt-5">
+      <h2 id="associated-array" class="text-2xl font-semibold mb-4">8. Associated Array</h2>
+      <pre>
+&lt;?php
+$output = null;
+
+// create associate array
+$food = [
+  'name' => 'carrot',
+  'type' => 'veggie',
+  'in_dinners' => ['soups', 'raw', 'stew']
+];
+
+$output = $food;
+
+// access the associated array value
+$output = $food['name'];
+
+// access nested array value
+$output = $food['in_dinners'][0];
+
+// add new elements to the array
+$food['color'] = 'orange';
+$output = $food;
+
+// remove value 
+unset($food['color']);
+$output = $food;
+?&gt;
+</pre>
+    </div> 
+
 
   </div>
 
