@@ -34,6 +34,9 @@
     <li class="nav-link">
       <a href="#removing-values" onclick="scrollToSection('removing-values')" class="hover:underline"> 6. Removing values</a>
     </li>   
+    <li class="nav-link">
+      <a href="#arrays-functions" onclick="scrollToSection('arrays-functions')" class="hover:underline"> 7. Arrays Functions</a>
+    </li>   
   </ul>
 
   <div class="container mx-auto p-4 mt-4">
@@ -164,6 +167,71 @@ $num = array_values($num);
   int(4)
   }   
  */
+?&gt;
+
+</pre>
+    </div> 
+
+  <!-- Arrays Functions -->
+  <div class="bg-white rounded-lg shadow-md p-6  mt-5">
+      <h2 id="arrays-functions" class="text-2xl font-semibold mb-4">7. Arrays Functions</h2>
+      <pre>
+&lt;?php
+$output = null;
+
+$ids = [34, 12, 42, 4];
+$users = ['user1', 'user2', 'user3'];
+
+// count(), return numbers of items in an array
+$output = count($ids); 
+
+// sort(), manipilate the array without returning 
+sort($ids);
+
+// rsort(), reverse sort without returning 
+rsort($ids);
+
+// array_push(), add value on the end of the array without returning
+array_push($ids, 66);
+
+// remove last element from the end of the array without returning
+array_pop($ids);
+
+// shift/remove from the beginning of the array without returning
+array_shift($ids);
+
+// add to the beginning of the array without returning
+array_unshift($ids, 100);
+
+// function returns part of the array as new array
+$ids2 = array_slice($ids, 0, 2);
+var_dump($ids2);
+
+// modify orginal array and replace/removes with new array, no returning
+// array_splice($ids, 0, 2); // removes
+array_splice($ids, 0, 1, 101); // replace
+
+// return values. Similar to javascript reduce function
+$ids3 = '<p>Sum of id\'s: ' . array_sum($ids) . '</p>';
+echo $ids3;
+
+// returns searched array for given value
+$user2 = '<p>User2 is at index ' . array_search('user2', $users) . '</p>';
+echo $user2;
+
+// check if value exist in the array
+$user1 = '<p>User1 is array: ' . in_array('user1', $users) . '</p>';
+echo $user1;
+// var_dump(in_array('user1', $users)); // bool (true)
+
+// turn array into string 
+$ids4 = implode(' - ', $ids);
+echo $ids4 . '<br />';
+
+// turn string into array
+$some_arry = 'item1,item2,item3,item4';
+$ids5 = explode(',', $some_arry);
+var_dump($ids5);
 ?&gt;
 
 </pre>
